@@ -1,0 +1,12 @@
+FROM maven:3.8.4-openjdk-8 AS BUILD_IMAGE
+WORKDIR /app
+
+COPY . .
+
+RUN mvn clean install
+
+FROM openjdk:8-jre
+WORKDIR /app
+COPY --from=BUILD_IMAGE /app/target/*.jar car-factory.jar
+EXPOSE 8080
+CMD ["java","-jar","car-factory.jar"]
