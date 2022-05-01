@@ -57,8 +57,8 @@ Docker -
 
 ## Docker
 
-Docker: https://hub.docker.com/repository/docker/necatisahiin/vodafone-garage-automated-ticketing-system
-docker run -d --name garage -p 8080:8080 necatisahiin/vodafone-garage-automated-ticketing-system
+Docker: https://hub.docker.com/r/necatisahiin/garage-automated-ticketing-system
+docker run -d --name garage -p 8080:8080 necatisahiin/garage-automated-ticketing-system
 
 docker logs -f garage
 
